@@ -123,24 +123,40 @@ nav ul li a:hover {
     color: white !important;
 }
 
-/* --- Estilos de la Sección Hero --- */
+/* --- Estilos de la Sección Hero (con preparación para carrusel) --- */
 #hero {
-    background-color: #f4f7fc;
+    color: white; /* Aseguramos que el texto sea blanco para el contraste */
     text-align: center;
-    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+    padding: 60px 20px; /* Reducimos el padding vertical un poco */
+    position: relative; /* Necesario para la capa de oscuridad */
+    
+    /* Propiedades del fondo */
+    background-size: cover;
+    background-position: center center;
+    transition: background-image 1s ease-in-out; /* ¡La transición para el efecto FADE! */
 }
 
-#hero h1 {
-    font-size: 3.2rem;
-    margin-bottom: 1rem;
-    color: var(--color-primario);
+/* Capa de oscuridad para asegurar la legibilidad del texto */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo negro con 40% de opacidad */
+    z-index: 1;
 }
 
-#hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 2rem auto;
-    line-height: 1.6;
+/* Nos aseguramos de que el contenido esté por encima de la capa de oscuridad */
+#hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 .btn-principal {
