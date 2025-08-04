@@ -47,3 +47,18 @@ function changeBackgroundImage() {
 
 // 6. Usamos setInterval para llamar a la función cada 5 segundos (5000 milisegundos)
 setInterval(changeBackgroundImage, 5000);
+
+// --- CERRAR MENÚ AL HACER CLIC EN UN ENLACE ---
+
+// 1. Seleccionamos todos los enlaces que están dentro del menú de navegación
+const navLinks = document.querySelectorAll('#main-nav a');
+
+// 2. Recorremos cada enlace para añadirle una funcionalidad
+navLinks.forEach(link => {
+    // 3. A cada enlace, le añadimos un "escuchador de eventos" de clic
+    link.addEventListener('click', () => {
+        // 4. Cuando se haga clic, removemos la clase 'nav-active' del menú
+        // Esto hará que el menú se oculte automáticamente.
+        navMenu.classList.remove('nav-active');
+    });
+});
