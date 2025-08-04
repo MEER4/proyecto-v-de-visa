@@ -482,3 +482,36 @@ nav#main-nav .btn-contacto {
     fill: var(--color-secundario); /* Cambia al color rojo al pasar el ratón */
     transform: scale(1.1); /* Agranda un poco el icono */
 }
+
+/* --- Estilos de la Sección Sobre Nosotros --- */
+#nosotros {
+    background-color: var(--color-fondo); /* Fondo blanco */
+}
+
+.nosotros-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* La columna de texto es un poco más ancha */
+    gap: 3rem;
+    align-items: center;
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.nosotros-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Hacemos que la sección "Sobre Nosotros" sea responsive */
+@media (max-width: 900px) {
+    .nosotros-wrapper {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+        text-align: center;
+    }
+}
