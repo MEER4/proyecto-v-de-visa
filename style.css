@@ -7,21 +7,10 @@
     --fuente-principal: 'Arial', sans-serif;
 }
 
-/* --- MEJORAS DE SCROLL --- */
-
-/* Hace que el desplazamiento sea suave en toda la página */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Soluciona el problema del contenido oculto por el header fijo */
-section[id] {
-    scroll-margin-top: 80px; /* Un valor igual a la altura de tu header */
-}
-
-/* REGLAS FUNDAMENTALES PARA EVITAR PROBLEMAS DE SCROLL */
+/* --- REGLAS FUNDAMENTALES DE MAQUETACIÓN (VERSIÓN CORREGIDA) --- */
 html {
     height: 100%;
+    scroll-behavior: smooth; /* Mantiene el scroll suave */
 }
 
 body {
@@ -30,19 +19,20 @@ body {
     font-family: var(--fuente-principal);
     color: var(--color-texto);
     background-color: #f4f7fc;
+    display: flex;
+    flex-direction: column;
 }
 
-/* NUEVOS CONTENEDORES PARA LA MAQUETACIÓN */
 #page-container {
-  position: relative;
-  min-height: 100vh; /* Ocupa como mínimo toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto; /* ¡CLAVE! Ocupa el espacio disponible pero no se encoge */
 }
 
 #content-wrap {
-  /* Esto empuja el contenido hacia abajo para dejar espacio al header fijo */
-  padding-top: 80px; 
+  padding-top: 80px; /* Espacio para el header fijo */
+  flex: 1 0 auto; /* ¡CLAVE! El contenido principal se estira */
 }
-
 /* --- Estilos Generales --- */
 .container {
     width: 90%;
@@ -407,7 +397,8 @@ nav#main-nav {
 
 /* La clase 'activa' que JavaScript va a añadir */
 nav#main-nav.nav-active {
-    transform: translateX(0); /* Lo trae de vuelta a la pantalla */
+    transform: translateY(0); /* CORREGIDO: Lo trae de vuelta a la pantalla desde arriba */
+
 }
 
 /* Ajustamos la lista y los enlaces para la vista móvil */
@@ -488,33 +479,6 @@ nav#main-nav .btn-contacto {
     background-color: var(--color-fondo); /* Fondo blanco */
 }
 
-.nosotros-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr; /* La columna de texto es un poco más ancha */
-    gap: 3rem;
-    align-items: center;
-}
-
-.nosotros-imagen img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
-
-.nosotros-texto p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
-}
-
-/* Hacemos que la sección "Sobre Nosotros" sea responsive */
-@media (max-width: 900px) {
-    .nosotros-wrapper {
-        grid-template-columns: 1fr; /* Una sola columna en móvil */
-        text-align: center;
-    }
-}
 
 /* --- Estilos MEJORADOS de la Sección Sobre Nosotros --- */
 #nosotros {
