@@ -706,3 +706,130 @@ body.modal-open {
     cursor: pointer;
     width: 100%;
 }
+
+/* --- Estilos de la Página de Blog --- */
+
+#blog-header {
+    background-color: #f4f7fc;
+    text-align: center;
+    padding: 100px 20px 60px 20px;
+    padding-top: 140px; /* Más padding por el header fijo */
+}
+
+#blog-header h1 {
+    font-size: 3rem;
+    color: var(--color-primario);
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 4rem 0;
+}
+
+.article-card {
+    display: block;
+    background-color: var(--color-fondo);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: var(--color-texto);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.article-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+}
+
+.article-card .article-content {
+    padding: 1.5rem;
+}
+
+.article-card h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: var(--color-primario);
+}
+
+.article-card span {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--color-secundario);
+}
+
+/* --- Estilos de la Página de Artículo Individual --- */
+
+.article-container {
+    max-width: 800px;
+    margin: 0 auto; /* Centra el contenido del artículo */
+    padding: 100px 20px 60px 20px;
+    padding-top: 120px;
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.article-featured-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.article-header h1 {
+    font-size: 2.8rem;
+    color: var(--color-primario);
+    line-height: 1.2;
+}
+
+.article-meta {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 1rem;
+}
+
+.article-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.article-body h2 {
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.article-body ul {
+    padding-left: 20px;
+}
+
+.article-cta {
+    background-color: #eaf2fa;
+    border-left: 5px solid var(--color-secundario);
+    padding: 2rem;
+    margin: 3rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.article-cta h3 {
+    margin-top: 0;
+    color: var(--color-primario);
+}
