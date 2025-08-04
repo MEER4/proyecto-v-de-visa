@@ -626,3 +626,83 @@ nav#main-nav .btn-contacto {
         grid-template-columns: 1fr;
     }
 }
+
+/* --- Estilos para la Ventana Modal de Servicios --- */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    display: none; /* Oculto por defecto */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Por encima de todo */
+}
+
+.modal-overlay.active {
+    display: flex; /* Se muestra cuando tiene la clase 'active' */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    max-width: 800px; /* Ancho máximo del modal */
+    width: 90%;
+    max-height: 90vh; /* Altura máxima */
+    overflow-y: auto; /* Permite scroll si el contenido es muy largo */
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #aaa;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.close-modal:hover {
+    color: #333;
+}
+
+/* Estilo para el contenido dentro del modal */
+#modal-body h3 {
+    font-size: 2rem;
+    color: var(--color-primario);
+}
+#modal-body h4 {
+    font-size: 1.4rem;
+    color: var(--color-primario);
+    margin-top: 2rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+#modal-body ul {
+    list-style-type: '✓'; /* Viñeta personalizada */
+    padding-left: 1.5rem;
+}
+#modal-body li {
+    padding-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Evita que la página principal haga scroll cuando el modal está abierto */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Estilo para que las tarjetas de servicio parezcan botones */
+.servicio-card {
+    /* Hereda estilos pero añadimos esto para que funcione como botón */
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}

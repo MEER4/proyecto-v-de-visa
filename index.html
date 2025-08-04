@@ -42,35 +42,32 @@
                 </section>
 
                 <section id="servicios">
-                    <div class="container">
-                        <h2 class="section-title">Nuestros Servicios</h2>
-                        <div class="servicios-grid">
-                            <div class="servicio-card">
+                    <div class="servicios-grid">
+                            <button class="servicio-card" data-service="usa">
                                 <h3>Visa de Turismo EE.UU. (B1/B2)</h3>
                                 <p>Te guiamos en cada paso para tu solicitud de visa de paseo, desde el llenado del formulario DS-160 hasta la preparación para tu entrevista.</p>
-                            </div>
-                            <div class="servicio-card">
+                            </button>
+                            <button class="servicio-card" data-service="schengen">
                                 <h3>Visa de Espacio Schengen</h3>
                                 <p>Viaja por más de 25 países de Europa con una sola visa. Te asistimos para que presentes una solicitud sólida y completa.</p>
-                            </div>
-                            <div class="servicio-card">
+                            </button>
+                            <button class="servicio-card" data-service="estudiante">
                                 <h3>Visa de Estudiante (F1)</h3>
                                 <p>Asesoría especializada para futuros estudiantes en el extranjero, asegurando que cumplas con todos los requisitos consulares.</p>
-                            </div>
-                            <div class="servicio-card">
+                            </button>
+                            <button class="servicio-card" data-service="peticiones">
                                 <h3>Peticiones Familiares</h3>
                                 <p>Reunifica a tu familia. Ofrecemos asesoría completa para procesos de petición de residencia por lazos familiares.</p>
-                            </div>
-                            <div class="servicio-card">
+                            </button>
+                            <button class="servicio-card" data-service="canada">
                                 <h3>Visa Canadiense</h3>
                                 <p>Explora las oportunidades que Canadá tiene para ofrecer. Te ayudamos a preparar tu aplicación de visa de visitante.</p>
-                            </div>
-                            <div class="servicio-card">
+                            </button>
+                            <button class="servicio-card" data-service="otros">
                                 <h3>Otros Trámites</h3>
                                 <p>¿Necesitas otro tipo de visa o trámite migratorio? Contáctanos para una consulta personalizada.</p>
-                            </div>
+                            </button>
                         </div>
-                    </div>
                 </section>
 
                 <section id="testimonios">
@@ -215,6 +212,14 @@
         <p>© 2025 VdeVisas. Todos los derechos reservados. Un sitio web de demostración creado por Mario Estrella.</p>
     </div>
 </footer>
+
+    <div id="service-modal-overlay" class="modal-overlay">
+    <div class="modal-content">
+        <button id="close-modal-btn" class="close-modal" aria-label="Cerrar ventana">&times;</button>
+        <div id="modal-body">
+            </div>
+    </div>
+</div>
      </div> <script src="app.js"></script>
 </body>
 </html>
